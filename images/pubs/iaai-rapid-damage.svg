@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="Arial, Helvetica, sans-serif">
+  <style>@media (prefers-reduced-motion:reduce){*{animation-duration:0s!important;animation-iteration-count:1!important}}
+  
+  .t{fill:#5f7f84;opacity:.35;animation:fill 4s ease-in-out infinite}
+  .t1{animation-delay:0s}.t2{animation-delay:.16s}.t3{animation-delay:.32s}
+  .t4{animation-delay:.48s}.t5{animation-delay:.64s}.t6{animation-delay:.8s}
+  @keyframes fill{0%,4%{opacity:0}16%,86%{opacity:.42}100%{opacity:0}}
+  .aoi{fill:none;stroke:#b1442b;stroke-width:3;opacity:1;transform-box:fill-box;transform-origin:center;animation:snap 4s ease-in-out infinite}
+  @keyframes snap{0%,46%{opacity:0;transform:scale(1.1)}56%,88%{opacity:1;transform:scale(1)}100%{opacity:0}}
+  .bar{fill:#b1442b;transform-box:fill-box;transform-origin:left center;transform:scaleX(1);animation:grow 4s ease-in-out infinite}
+  @keyframes grow{0%,6%{transform:scaleX(0)}70%,100%{transform:scaleX(1)}}
+</style>
+  <rect width="480" height="360" fill="#f4ece5"/>
+  <g stroke="#356b74" stroke-opacity="0.08" stroke-width="1">
+    <line x1="96" y1="0" x2="96" y2="360"/><line x1="192" y1="0" x2="192" y2="360"/><line x1="288" y1="0" x2="288" y2="360"/><line x1="384" y1="0" x2="384" y2="360"/>
+    <line x1="0" y1="72" x2="480" y2="72"/><line x1="0" y1="144" x2="480" y2="144"/><line x1="0" y1="216" x2="480" y2="216"/><line x1="0" y1="288" x2="480" y2="288"/>
+  </g>
+  <g stroke="#356b74" stroke-opacity="0.30" stroke-width="2">
+    <line x1="48" y1="0" x2="48" y2="7"/><line x1="144" y1="0" x2="144" y2="7"/><line x1="240" y1="0" x2="240" y2="7"/><line x1="336" y1="0" x2="336" y2="7"/><line x1="432" y1="0" x2="432" y2="7"/>
+    <line x1="0" y1="108" x2="7" y2="108"/><line x1="0" y1="252" x2="7" y2="252"/>
+  </g>
+
+  <g>
+    <rect class="t t1" x="150" y="118" width="72" height="72"/><rect class="t t2" x="230" y="118" width="72" height="72"/><rect class="t t3" x="310" y="118" width="72" height="72"/>
+    <rect class="t t4" x="150" y="198" width="72" height="72"/><rect class="t t5" x="230" y="198" width="72" height="72"/><rect class="t t6" x="310" y="198" width="72" height="72"/>
+  </g>
+  <rect class="aoi" x="142" y="110" width="248" height="168"/>
+  <rect x="150" y="300" width="232" height="9" fill="#e7e1da"/>
+  <rect class="bar" x="150" y="300" width="232" height="9"/>
+
+  <rect x="16" y="16" width="66" height="26" fill="#b1442b"/>
+  <text x="26" y="34" fill="#ffffff" font-size="14" font-weight="700" letter-spacing="1">IAAI</text>
+  <text x="18" y="350" fill="#5f574f" font-size="12" font-weight="700" letter-spacing="3">2026</text>
+  <g><rect x="372" y="334" width="22" height="6" fill="#26221f"/><rect x="394" y="334" width="22" height="6" fill="#f4ece5" stroke="#26221f" stroke-width="1"/><rect x="416" y="334" width="22" height="6" fill="#26221f"/></g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="Arial, Helvetica, sans-serif">
+  <style>@media (prefers-reduced-motion:reduce){*{animation-duration:0s!important;animation-iteration-count:1!important}}
+  
+  .drift{transform-box:fill-box;transform-origin:center;animation:drift 3.4s ease-in-out infinite alternate}
+  @keyframes drift{0%{transform:translate(-18px,-12px)}100%{transform:translate(16px,14px)}}
+  .ov{fill:#b1442b;animation:ovp 3.4s ease-in-out infinite alternate}
+  @keyframes ovp{0%{opacity:.15}100%{opacity:.55}}
+</style>
+  <rect width="480" height="360" fill="#f4ece5"/>
+  <g stroke="#356b74" stroke-opacity="0.08" stroke-width="1">
+    <line x1="96" y1="0" x2="96" y2="360"/><line x1="192" y1="0" x2="192" y2="360"/><line x1="288" y1="0" x2="288" y2="360"/><line x1="384" y1="0" x2="384" y2="360"/>
+    <line x1="0" y1="72" x2="480" y2="72"/><line x1="0" y1="144" x2="480" y2="144"/><line x1="0" y1="216" x2="480" y2="216"/><line x1="0" y1="288" x2="480" y2="288"/>
+  </g>
+  <g stroke="#356b74" stroke-opacity="0.30" stroke-width="2">
+    <line x1="48" y1="0" x2="48" y2="7"/><line x1="144" y1="0" x2="144" y2="7"/><line x1="240" y1="0" x2="240" y2="7"/><line x1="336" y1="0" x2="336" y2="7"/><line x1="432" y1="0" x2="432" y2="7"/>
+    <line x1="0" y1="108" x2="7" y2="108"/><line x1="0" y1="252" x2="7" y2="252"/>
+  </g>
+
+  <rect class="ov" x="200" y="150" width="92" height="66"/>
+  <rect x="150" y="120" width="150" height="110" fill="none" stroke="#b1442b" stroke-width="3"/>
+  <rect class="drift" x="200" y="146" width="150" height="110" fill="none" stroke="#356b74" stroke-width="3" stroke-dasharray="7 5"/>
+  <text x="150" y="112" fill="#8f341f" font-size="12" font-weight="700" letter-spacing="1">ANNOTATOR</text>
+  <text x="360" y="276" fill="#2c5a61" font-size="12" font-weight="700" letter-spacing="1" text-anchor="end">REVIEWER</text>
+
+  <rect x="16" y="16" width="77" height="26" fill="#b1442b"/>
+  <text x="26" y="34" fill="#ffffff" font-size="14" font-weight="700" letter-spacing="1">HCOMP</text>
+  <text x="18" y="350" fill="#5f574f" font-size="12" font-weight="700" letter-spacing="3">2026</text>
+  <g><rect x="372" y="334" width="22" height="6" fill="#26221f"/><rect x="394" y="334" width="22" height="6" fill="#f4ece5" stroke="#26221f" stroke-width="1"/><rect x="416" y="334" width="22" height="6" fill="#26221f"/></g>
+</svg>

@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Priyankari Perali"
 title_separator          : "-"
 name                     : &name "Priyankari Perali"
-description              : &description "Research Engineer (Contractor), with Parsons at U.S. DEVCOM Army Research Laboratory"
+description              : &description "Machine Learning Research Engineer (contractor, Parsons) at the U.S. DEVCOM Army Research Laboratory"
 url                      : https://priyankari.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Priyankari/priyankari.github.io"
@@ -24,7 +24,7 @@ author:
   avatar           : "priya_picture.jpg"
   name             : "Priyankari Perali"
   pronouns         : # example: "she/her"  
-  bio              : "Research Engineer (Contractor), with Parsons at U.S. DEVCOM Army Research Laboratory"
+  bio              : "Machine Learning Research Engineer (contractor, Parsons) at the U.S. DEVCOM Army Research Laboratory"
   location         : "Aberdeen Proving Ground, MD"
   employer         : "Parsons, U.S. DEVCOM Army Research Laboratory"
   uri              : # URL
@@ -77,9 +77,9 @@ author:
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
   published:
-    title: 'Peer-Reviewed Publications'
+    title: 'Peer-Reviewed & Accepted Publications'
   submitted:
-    title: 'Submitted and Pre-Prints'
+    title: 'Preprints & Under Review'
   # books:
   #   title: 'Books'
   # manuscripts:

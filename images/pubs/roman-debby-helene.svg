@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="Arial, Helvetica, sans-serif">
+  <style>@media (prefers-reduced-motion:reduce){*{animation-duration:0s!important;animation-iteration-count:1!important}}
+  
+  .hur{transform-box:fill-box;transform-origin:center;animation:spin 7s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .mk{fill:#b1442b;opacity:0;transform-box:fill-box;transform-origin:center}
+  .k1{animation:mp 4.2s ease-in-out infinite}
+  .k2{animation:mp 4.2s ease-in-out infinite .9s}
+  .k3{animation:mp 4.2s ease-in-out infinite 1.8s}
+  .k4{animation:mp 4.2s ease-in-out infinite 2.7s}
+  @keyframes mp{0%,8%{opacity:0;transform:scale(.4)}20%,78%{opacity:1;transform:scale(1)}94%,100%{opacity:0}}
+</style>
+  <rect width="480" height="360" fill="#f4ece5"/>
+  <g stroke="#356b74" stroke-opacity="0.08" stroke-width="1">
+    <line x1="96" y1="0" x2="96" y2="360"/><line x1="192" y1="0" x2="192" y2="360"/><line x1="288" y1="0" x2="288" y2="360"/><line x1="384" y1="0" x2="384" y2="360"/>
+    <line x1="0" y1="72" x2="480" y2="72"/><line x1="0" y1="144" x2="480" y2="144"/><line x1="0" y1="216" x2="480" y2="216"/><line x1="0" y1="288" x2="480" y2="288"/>
+  </g>
+  <g stroke="#356b74" stroke-opacity="0.30" stroke-width="2">
+    <line x1="48" y1="0" x2="48" y2="7"/><line x1="144" y1="0" x2="144" y2="7"/><line x1="240" y1="0" x2="240" y2="7"/><line x1="336" y1="0" x2="336" y2="7"/><line x1="432" y1="0" x2="432" y2="7"/>
+    <line x1="0" y1="108" x2="7" y2="108"/><line x1="0" y1="252" x2="7" y2="252"/>
+  </g>
+
+  <g class="hur" stroke="#356b74" fill="none" stroke-linecap="round">
+    <path d="M240 192 C 240 172 268 168 278 190 C 292 220 258 246 222 232 C 176 214 184 158 236 148 C 300 136 322 202 292 246" stroke-width="9" stroke-opacity="0.6"/>
+    <path d="M240 192 C 240 212 212 216 202 194 C 188 164 222 138 258 152 C 304 170 296 226 244 236 C 180 248 158 182 188 138" stroke-width="9" stroke-opacity="0.4"/>
+  </g>
+  <circle cx="240" cy="192" r="6" fill="#f4ece5" stroke="#356b74" stroke-width="3"/>
+  <rect class="mk k1" x="150" y="120" width="15" height="15"/>
+  <rect class="mk k2" x="332" y="138" width="15" height="15"/>
+  <rect class="mk k3" x="322" y="258" width="15" height="15"/>
+  <rect class="mk k4" x="150" y="256" width="15" height="15"/>
+
+  <rect x="16" y="16" width="88" height="26" fill="#b1442b"/>
+  <text x="26" y="34" fill="#ffffff" font-size="14" font-weight="700" letter-spacing="1">RO-MAN</text>
+  <text x="18" y="350" fill="#5f574f" font-size="12" font-weight="700" letter-spacing="3">2025</text>
+  <g><rect x="372" y="334" width="22" height="6" fill="#26221f"/><rect x="394" y="334" width="22" height="6" fill="#f4ece5" stroke="#26221f" stroke-width="1"/><rect x="416" y="334" width="22" height="6" fill="#26221f"/></g>
+</svg>

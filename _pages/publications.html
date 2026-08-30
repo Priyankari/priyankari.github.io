@@ -5,33 +5,34 @@ permalink: /publications/
 author_profile: true
 ---
 
-<!-- {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %} -->
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<p class="pub__intro">
+  My work spans human-centered AI/ML, robust machine learning, and human&#8211;robot interaction for disaster response.
+  {% if site.author.googlescholar %}A continuously updated list is on my <a href="{{ site.author.googlescholar }}">Google Scholar profile</a>.{% endif %}
+</p>
+
+{% assign pubs_sorted = site.publications | sort: 'date' | reverse %}
+
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
+  {% for category in site.publication_category %}
     {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
+    {% for post in pubs_sorted %}
       {% if post.category != category[0] %}
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        <h2 class="pub__section-title">{{ category[1].title }}</h2>
+        <hr />
         {% assign title_shown = true %}
       {% endunless %}
       {% include archive-single.html %}
     {% endfor %}
   {% endfor %}
 {% else %}
-  {% for post in site.publications reversed %}
+  {% for post in pubs_sorted %}
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
 
-
-
-<!-- <div class="wordwrap">*Indicates Equal Contribution.</div> -->
+<p class="pub__footnote"><small>* denotes equal contribution.</small></p>

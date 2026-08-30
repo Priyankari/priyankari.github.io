@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="Arial, Helvetica, sans-serif">
+  <style>@media (prefers-reduced-motion:reduce){*{animation-duration:0s!important;animation-iteration-count:1!important}}
+  
+  .as{fill:#5f7f84;opacity:.34}
+  .a1{animation:s1 5s ease-in-out infinite}.a2{animation:s2 5s ease-in-out infinite}.a3{animation:s3 5s ease-in-out infinite}
+  .a4{animation:s4 5s ease-in-out infinite}.a5{animation:s5 5s ease-in-out infinite}.a6{animation:s6 5s ease-in-out infinite}
+  @keyframes s1{0%,8%{opacity:0;transform:translate(-90px,-60px)}26%,88%{opacity:.4;transform:translate(0,0)}100%{opacity:0}}
+  @keyframes s2{0%,8%{opacity:0;transform:translate(0,-90px)}30%,88%{opacity:.4;transform:translate(0,0)}100%{opacity:0}}
+  @keyframes s3{0%,8%{opacity:0;transform:translate(90px,-60px)}34%,88%{opacity:.4;transform:translate(0,0)}100%{opacity:0}}
+  @keyframes s4{0%,8%{opacity:0;transform:translate(-90px,60px)}38%,88%{opacity:.4;transform:translate(0,0)}100%{opacity:0}}
+  @keyframes s5{0%,8%{opacity:0;transform:translate(0,90px)}42%,88%{opacity:.4;transform:translate(0,0)}100%{opacity:0}}
+  @keyframes s6{0%,8%{opacity:0;transform:translate(90px,60px)}46%,88%{opacity:.4;transform:translate(0,0)}100%{opacity:0}}
+  .bb{fill:none;stroke:#b1442b;stroke-width:3;opacity:1}
+  .c1{animation:cp 5s ease-in-out infinite 2.4s}.c2{animation:cp 5s ease-in-out infinite 2.8s}.c3{animation:cp 5s ease-in-out infinite 3.2s}
+  @keyframes cp{0%,4%{opacity:0}12%,60%{opacity:1}80%,100%{opacity:0}}
+</style>
+  <rect width="480" height="360" fill="#f4ece5"/>
+  <g stroke="#356b74" stroke-opacity="0.08" stroke-width="1">
+    <line x1="96" y1="0" x2="96" y2="360"/><line x1="192" y1="0" x2="192" y2="360"/><line x1="288" y1="0" x2="288" y2="360"/><line x1="384" y1="0" x2="384" y2="360"/>
+    <line x1="0" y1="72" x2="480" y2="72"/><line x1="0" y1="144" x2="480" y2="144"/><line x1="0" y1="216" x2="480" y2="216"/><line x1="0" y1="288" x2="480" y2="288"/>
+  </g>
+  <g stroke="#356b74" stroke-opacity="0.30" stroke-width="2">
+    <line x1="48" y1="0" x2="48" y2="7"/><line x1="144" y1="0" x2="144" y2="7"/><line x1="240" y1="0" x2="240" y2="7"/><line x1="336" y1="0" x2="336" y2="7"/><line x1="432" y1="0" x2="432" y2="7"/>
+    <line x1="0" y1="108" x2="7" y2="108"/><line x1="0" y1="252" x2="7" y2="252"/>
+  </g>
+
+  <g>
+    <rect class="as a1" x="150" y="120" width="76" height="76"/><rect class="as a2" x="228" y="120" width="76" height="76"/><rect class="as a3" x="306" y="120" width="76" height="76"/>
+    <rect class="as a4" x="150" y="198" width="76" height="76"/><rect class="as a5" x="228" y="198" width="76" height="76"/><rect class="as a6" x="306" y="198" width="76" height="76"/>
+  </g>
+  <rect class="bb c1" x="162" y="132" width="46" height="40"/>
+  <rect class="bb c2" x="250" y="150" width="44" height="52"/>
+  <rect class="bb c3" x="320" y="210" width="50" height="44"/>
+
+  <rect x="16" y="16" width="77" height="26" fill="#b1442b"/>
+  <text x="26" y="34" fill="#ffffff" font-size="14" font-weight="700" letter-spacing="1">arXiv</text>
+  <text x="18" y="350" fill="#5f574f" font-size="12" font-weight="700" letter-spacing="3">2024</text>
+  <g><rect x="372" y="334" width="22" height="6" fill="#26221f"/><rect x="394" y="334" width="22" height="6" fill="#f4ece5" stroke="#26221f" stroke-width="1"/><rect x="416" y="334" width="22" height="6" fill="#26221f"/></g>
+</svg>

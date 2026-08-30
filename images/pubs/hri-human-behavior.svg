@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" font-family="Arial, Helvetica, sans-serif">
+  <style>@media (prefers-reduced-motion:reduce){*{animation-duration:0s!important;animation-iteration-count:1!important}}
+  
+  .dot{animation:mv 4s ease-in-out infinite}
+  @keyframes mv{0%{transform:translate(0,0)}100%{transform:translate(232px,-128px)}}
+  .cone{fill:#b1442b;fill-opacity:.16;transform-box:fill-box;transform-origin:left center;animation:br 2s ease-in-out infinite alternate}
+  @keyframes br{0%{transform:scale(.6,.7)}100%{transform:scale(1,1)}}
+  .gh{fill:#b1442b;opacity:0}
+  .g1{animation:gf 4s ease-in-out infinite .4s}.g2{animation:gf 4s ease-in-out infinite .8s}.g3{animation:gf 4s ease-in-out infinite 1.2s}
+  @keyframes gf{0%,10%{opacity:0}30%{opacity:.5}70%,100%{opacity:0}}
+</style>
+  <rect width="480" height="360" fill="#f4ece5"/>
+  <g stroke="#356b74" stroke-opacity="0.08" stroke-width="1">
+    <line x1="96" y1="0" x2="96" y2="360"/><line x1="192" y1="0" x2="192" y2="360"/><line x1="288" y1="0" x2="288" y2="360"/><line x1="384" y1="0" x2="384" y2="360"/>
+    <line x1="0" y1="72" x2="480" y2="72"/><line x1="0" y1="144" x2="480" y2="144"/><line x1="0" y1="216" x2="480" y2="216"/><line x1="0" y1="288" x2="480" y2="288"/>
+  </g>
+  <g stroke="#356b74" stroke-opacity="0.30" stroke-width="2">
+    <line x1="48" y1="0" x2="48" y2="7"/><line x1="144" y1="0" x2="144" y2="7"/><line x1="240" y1="0" x2="240" y2="7"/><line x1="336" y1="0" x2="336" y2="7"/><line x1="432" y1="0" x2="432" y2="7"/>
+    <line x1="0" y1="108" x2="7" y2="108"/><line x1="0" y1="252" x2="7" y2="252"/>
+  </g>
+
+  <path d="M44 300 C 150 270, 180 200, 250 180 S 400 140, 452 96" fill="none" stroke="#356b74" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 5"/>
+  <polygon class="cone" points="250,180 452,70 452,150"/>
+  <circle class="gh g1" cx="300" cy="158" r="6"/><circle class="gh g2" cx="360" cy="132" r="6"/><circle class="gh g3" cx="420" cy="106" r="6"/>
+  <circle class="dot" cx="44" cy="300" r="9" fill="#b1442b"/>
+
+  <rect x="16" y="16" width="154" height="26" fill="#b1442b"/>
+  <text x="26" y="34" fill="#ffffff" font-size="14" font-weight="700" letter-spacing="1">ACM/IEEE HRI</text>
+  <text x="18" y="350" fill="#5f574f" font-size="12" font-weight="700" letter-spacing="3">2024</text>
+  <g><rect x="372" y="334" width="22" height="6" fill="#26221f"/><rect x="394" y="334" width="22" height="6" fill="#f4ece5" stroke="#26221f" stroke-width="1"/><rect x="416" y="334" width="22" height="6" fill="#26221f"/></g>
+</svg>

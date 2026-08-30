@@ -1,0 +1,304 @@
+/* =========================================================================
+   Custom theme overrides — "modern academic, warm accent"
+   Loaded after main.css. Plain CSS so it needs no Jekyll/Sass build.
+   ========================================================================= */
+
+:root {
+  --accent:        #b1442b;   /* terracotta / brick — disaster, clay, damage */
+  --accent-dark:   #8f341f;
+  --accent-soft:   #f6ede8;   /* warm tint for chips / rules */
+  --sensor:        #356b74;   /* slate teal — remote sensing / aerial imagery */
+  --sensor-dark:   #2c5a61;
+  --sensor-soft:   #e7eef0;
+  --ink:           #26221f;   /* near-black, warm */
+  --ink-soft:      #5f574f;   /* muted body text */
+  --rule:          #e7e1da;
+  --page-bg:       #fffdfb;
+  /* graticule scale-rule: 2px accent baseline with sensor tick marks below */
+  --tickrule:
+    linear-gradient(var(--accent), var(--accent)) left top / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, var(--sensor) 0 2px, transparent 2px 15px) left bottom / 100% 4px no-repeat;
+}
+
+/* ---------- Base typography ------------------------------------------------ */
+
+body {
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title,
+.author__name {
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+
+.page__content { font-size: 1.02em; line-height: 1.72; }
+.page__content p { color: var(--ink-soft); }
+
+.page__title {
+  font-size: 2.1em;
+  padding-bottom: 0.35em;
+  border-bottom: 2px solid var(--accent-soft);
+}
+.page__content h2 {
+  margin-top: 2.2em;
+  font-size: 1.55em;
+  padding-left: 20px;
+  position: relative;
+}
+/* annotation corner-bracket before every content section heading */
+.page__content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.32em;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid var(--accent);
+  border-top: 2px solid var(--accent);
+}
+/* graticule scale-rule under the heading */
+.page__content h2::after {
+  content: "";
+  display: block;
+  height: 6px;
+  margin: 0.4em 0 0.1em;
+  background: var(--tickrule);
+}
+
+/* content links */
+.page__content a,
+.archive a:not(.btn),
+.author__content a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(177, 68, 43, 0.35);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.page__content a:hover,
+.archive a:not(.btn):hover,
+.author__content a:hover {
+  color: var(--accent-dark);
+  border-bottom-color: var(--accent-dark);
+}
+
+hr { border-top: 1px solid var(--rule); }
+
+/* ---------- Masthead / navigation -------------------------------------- */
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+  background: rgba(255, 253, 251, 0.92);
+  -webkit-backdrop-filter: saturate(180%) blur(6px);
+  backdrop-filter: saturate(180%) blur(6px);
+}
+.greedy-nav { background: transparent; }
+
+.greedy-nav .masthead__menu-item--lg a {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.3em;
+  color: var(--ink);
+}
+.greedy-nav .masthead__menu-item--lg a:hover { color: var(--accent); }
+
+.greedy-nav a { color: var(--ink-soft); font-weight: 500; }
+.greedy-nav a:hover { color: var(--accent); }
+.greedy-nav .visible-links a:before { background: var(--accent); height: 2px; }
+.greedy-nav__toggle .navicon,
+.greedy-nav__toggle .navicon:before,
+.greedy-nav__toggle .navicon:after { background: var(--ink); }
+
+/* ---------- Author sidebar ------------------------------------------------- */
+
+.author__avatar { display: block; }
+.author__avatar img {
+  max-width: 150px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 4px;
+  border: 1px solid var(--rule);
+  box-shadow: 0 6px 20px rgba(38, 34, 31, 0.10);
+}
+
+.author__name { font-size: 1.35em; margin: 0.6em 0 0.15em; }
+.author__bio { color: var(--ink-soft); font-size: 0.95em; line-height: 1.55; }
+
+.author__urls-wrapper button { display: none; }   /* hide dead "Follow" button */
+
+.author__urls {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(38, 34, 31, 0.06);
+}
+.author__urls li { font-size: 0.9em; }
+.author__urls a { color: var(--ink-soft); text-decoration: none; border: 0; }
+.author__urls a:hover { color: var(--accent); }
+.author__urls .icon-pad-right,
+.author__urls i { color: var(--accent); }
+
+/* ---------- Generic archive items --------------------------------------- */
+
+.archive__item-title { margin-top: 0.6em; font-size: 1.25em; }
+.archive__item-title a { color: var(--ink); text-decoration: none; }
+.archive__item-title a:hover { color: var(--accent); }
+
+/* ---------- Publications --------------------------------------------------- */
+
+.pub__intro {
+  font-size: 1.03em;
+  color: var(--ink-soft);
+  max-width: 46em;
+  margin-bottom: 2em;
+}
+
+.pub__section-title {
+  font-size: 1.5em;
+  margin-top: 1.8em;
+  margin-bottom: 0.2em;
+  padding-left: 20px;
+  position: relative;
+}
+.pub__section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.32em;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid var(--accent);
+  border-top: 2px solid var(--accent);
+}
+.pub__section-title + hr {
+  border: 0;
+  height: 6px;
+  margin: 0.4em 0 1.5em;
+  background: var(--tickrule);
+}
+
+.pub__item {
+  position: relative;
+  padding: 0.2em 0 1.25em 1.15em;
+  margin-bottom: 1.25em;
+  border-left: 3px solid var(--accent-soft);
+  border-bottom: 1px solid var(--rule);
+}
+.pub__item:hover { border-left-color: var(--accent); }
+.pub__item:last-child { border-bottom: 0; }
+
+/* venue chip styled like a CV detection label */
+.pub__venue {
+  display: inline-block;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent);
+  padding: 0.32em 0.6em;
+  border-radius: 2px;
+  margin-bottom: 0.6em;
+}
+
+.pub__title {
+  font-size: 1.2em;
+  line-height: 1.3;
+  margin: 0.1em 0 0.4em;
+}
+.pub__title a {
+  color: var(--ink);
+  text-decoration: none;
+  border: 0;
+}
+.pub__title a:hover { color: var(--accent); }
+
+.pub__citation {
+  font-size: 0.92em;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0.25em 0 0.6em;
+}
+.pub__citation b { color: var(--ink); }
+
+.pub__links a {
+  display: inline-block;
+  font-size: 0.82em;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border: 0;
+  margin-right: 1.1em;
+}
+.pub__links a:hover { color: var(--accent-dark); }
+.pub__links i { margin-right: 0.25em; }
+
+.pub__footnote { margin-top: 2.5em; color: var(--ink-soft); }
+
+/* ---------- Buttons ----------------------------------------------------- */
+
+.btn--inverse {
+  background: #fff;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+.btn--inverse:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ---------- Footer ------------------------------------------------------- */
+
+.page__footer {
+  background-color: var(--ink);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 40px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 40px);
+  color: #d9d2ca;
+}
+.page__footer a { color: #f0e9e1; }
+.page__footer a:hover { color: #fff; }
+.page__footer-follow .social-icons i { color: #cfc6bc; }
+.page__footer-copyright { color: #b7ada2; }
+
+/* reticle frame around the sidebar avatar */
+div.author__avatar {
+  position: relative;
+  width: 158px;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.author__avatar::before,
+div.author__avatar::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+}
+div.author__avatar::before {
+  top: -5px;
+  left: -5px;
+  border-left: 2px solid var(--accent);
+  border-top: 2px solid var(--accent);
+}
+div.author__avatar::after {
+  right: -5px;
+  bottom: -5px;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* ---------- Small screens --------------------------------------------- */
+
+@media (max-width: 47.9375em) {
+  .author__avatar img { width: 120px; height: 120px; max-width: 120px; }
+  div.author__avatar { width: 128px; }
+  .page__title { font-size: 1.8em; }
+}
