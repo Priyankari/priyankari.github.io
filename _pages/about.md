@@ -7,11 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-I'm a Machine Learning Research Engineer working on human-centered and robust ML for
-disaster response, remote sensing, and computer vision.
+I'm a PhD student at the University of Maryland. I am fortunate to be advised by [Ritiwik Gupta](https://ritwikgupta.me/). My research interests are broadly in representation learning, geospatial foundation models, and am motivated to apply this research for disaster response. 
 
-You can find me on [Google Scholar]({{ site.author.googlescholar }}),
-[ORCID]({{ site.author.orcid }}), and
-[LinkedIn](https://www.linkedin.com/in/{{ site.author.linkedin }}), or reach me by email at
-[{{ site.author.email }}](mailto:{{ site.author.email }}). See my
+Previously, I worked as a federal contractor at the Army Research Laboratory. I hold a MS is Computer Science at Texas A&M University, where I was fortunate to be advised by Robin Murphy, and was a part of the team the developed the [CLARKE](https://www.cmu.edu/ai-sdm/research/research-highlights/bda-rda-models.html) system for disaster response, which was deployed in response to Hurricanes Helene and Debby.
+
+You can reach me by email at
+perali [at] umd.edu. See my
 [publications](/publications/) for a full list of my work.
