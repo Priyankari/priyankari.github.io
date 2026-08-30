@@ -35,4 +35,52 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/custom.css">
 
+<!-- Light / dark theme toggle -->
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('theme');
+      if (stored === 'light' || stored === 'dark') {
+        document.documentElement.setAttribute('data-theme', stored);
+      }
+    } catch (e) {}
+
+    function currentTheme() {
+      var forced = document.documentElement.getAttribute('data-theme');
+      if (forced) return forced;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'theme-toggle';
+      btn.setAttribute('aria-label', 'Toggle light or dark theme');
+
+      function render() {
+        var dark = currentTheme() === 'dark';
+        btn.title = dark ? 'Switch to light theme' : 'Switch to dark theme';
+        btn.innerHTML = (dark ? '☀' : '☾') +
+          ' <span class="theme-toggle__label">' + (dark ? 'Light' : 'Dark') + '</span>';
+      }
+      render();
+
+      btn.addEventListener('click', function () {
+        var next = currentTheme() === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        render();
+      });
+
+      document.body.appendChild(btn);
+
+      try {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+          if (!document.documentElement.getAttribute('data-theme')) render();
+        });
+      } catch (e) {}
+    });
+  })();
+</script>
+
 <!-- end custom head snippets -->

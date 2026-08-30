@@ -7,6 +7,12 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+{% assign cv_url = "/files/priyankari_perali_CV__2026.pdf" | prepend: site.baseurl %}
 
-<embed src="{{ site.baseurl }}/files/priyankari_perali_CV__2026.pdf" width="600" height="700" type='application/pdf'> 
+<p class="cv-actions">
+  <a class="btn btn--primary" href="{{ cv_url }}">Download CV (PDF)</a>
+</p>
+
+<iframe class="cv-embed" src="{{ cv_url }}" title="Priyankari Perali — Curriculum Vitae" loading="lazy">
+  <p>Your browser can't show the embedded PDF. <a href="{{ cv_url }}">Download the CV</a> instead.</p>
+</iframe>

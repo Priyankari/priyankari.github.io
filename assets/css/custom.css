@@ -7,6 +7,7 @@
   --accent:        #b1442b;   /* terracotta / brick — disaster, clay, damage */
   --accent-dark:   #8f341f;
   --accent-soft:   #f6ede8;   /* warm tint for chips / rules */
+  --accent-on:     #ffffff;   /* text on an accent fill */
   --sensor:        #356b74;   /* slate teal — remote sensing / aerial imagery */
   --sensor-dark:   #2c5a61;
   --sensor-soft:   #e7eef0;
@@ -14,10 +15,82 @@
   --ink-soft:      #5f574f;   /* muted body text */
   --rule:          #e7e1da;
   --page-bg:       #fffdfb;
+  --surface:       #f7f2ec;   /* raised panels, buttons, popovers */
+  --masthead-bg:   rgba(255, 253, 251, 0.92);
+  --code-bg:       #f4efe9;
+  --footer-bg:     #26221f;
+  color-scheme: light;
   /* graticule scale-rule: 2px accent baseline with sensor tick marks below */
   --tickrule:
     linear-gradient(var(--accent), var(--accent)) left top / 100% 2px no-repeat,
     repeating-linear-gradient(90deg, var(--sensor) 0 2px, transparent 2px 15px) left bottom / 100% 4px no-repeat;
+}
+
+/* Dark palette — applies on OS dark preference unless the toggle forced light,
+   and always when the toggle forced dark. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --accent:      #e0774f;
+    --accent-dark: #ec8a66;
+    --accent-soft: #3a2c24;
+    --accent-on:   #1b1815;
+    --sensor:      #6ea9b1;
+    --sensor-dark: #8fc0c6;
+    --sensor-soft: #243230;
+    --ink:         #ece5dc;
+    --ink-soft:    #b0a89d;
+    --rule:        #3a352f;
+    --page-bg:     #1b1815;
+    --surface:     #241f1b;
+    --masthead-bg: rgba(27, 24, 21, 0.9);
+    --code-bg:     #241f1b;
+    --footer-bg:   #141210;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --accent:      #e0774f;
+  --accent-dark: #ec8a66;
+  --accent-soft: #3a2c24;
+  --accent-on:   #1b1815;
+  --sensor:      #6ea9b1;
+  --sensor-dark: #8fc0c6;
+  --sensor-soft: #243230;
+  --ink:         #ece5dc;
+  --ink-soft:    #b0a89d;
+  --rule:        #3a352f;
+  --page-bg:     #1b1815;
+  --surface:     #241f1b;
+  --masthead-bg: rgba(27, 24, 21, 0.9);
+  --code-bg:     #241f1b;
+  --footer-bg:   #141210;
+  color-scheme: dark;
+}
+
+/* ---------- Theme toggle button ---------------------------------------- */
+
+.theme-toggle {
+  position: fixed;
+  top: 0.9rem;
+  right: 1.1rem;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.35em 0.7em;
+  font: 600 0.8rem/1 "Inter", sans-serif;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 37.5em) {
+  .theme-toggle { top: 0.7rem; right: 0.7rem; padding: 0.35em; }
+  .theme-toggle .theme-toggle__label { display: none; }
 }
 
 /* ---------- Base typography ------------------------------------------------ */
@@ -41,8 +114,15 @@ h1, h2, h3, h4, h5, h6,
   color: var(--ink);
 }
 
-.page__content { font-size: 1.02em; line-height: 1.72; }
+.page__content { font-size: 1.02em; line-height: 1.72; color: var(--ink); }
 .page__content p { color: var(--ink-soft); }
+.page__content code, .page__content pre, .archive code, .archive pre {
+  background: var(--code-bg);
+  color: var(--ink);
+  border-color: var(--rule);
+}
+.page__content table td, .page__content table th { border-color: var(--rule); }
+.page__content table th { background: var(--accent-soft); color: var(--ink); }
 
 .page__title {
   font-size: 2.1em;
@@ -97,11 +177,21 @@ hr { border-top: 1px solid var(--rule); }
 
 .masthead {
   border-bottom: 1px solid var(--rule);
-  background: rgba(255, 253, 251, 0.92);
+  background: var(--masthead-bg);
   -webkit-backdrop-filter: saturate(180%) blur(6px);
   backdrop-filter: saturate(180%) blur(6px);
 }
 .greedy-nav { background: transparent; }
+.greedy-nav button { background-color: var(--accent); }
+.greedy-nav .hidden-links {
+  background: var(--surface);
+  border-color: var(--rule);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+.greedy-nav .hidden-links a { color: var(--ink-soft); }
+.greedy-nav .hidden-links a:hover { color: var(--accent); background: var(--accent-soft); }
+.greedy-nav .hidden-links:before { border-color: var(--rule) transparent; }
+.greedy-nav .hidden-links:after { border-color: var(--surface) transparent; }
 
 .greedy-nav .masthead__menu-item--lg a {
   font-family: "Newsreader", Georgia, serif;
@@ -137,11 +227,6 @@ hr { border-top: 1px solid var(--rule); }
 
 .author__urls-wrapper button { display: none; }   /* hide dead "Follow" button */
 
-.author__urls {
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(38, 34, 31, 0.06);
-}
 .author__urls li { font-size: 0.9em; }
 .author__urls a { color: var(--ink-soft); text-decoration: none; border: 0; }
 .author__urls a:hover { color: var(--accent); }
@@ -204,7 +289,7 @@ hr { border-top: 1px solid var(--rule); }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--accent-on);
   background: var(--accent);
   padding: 0.32em 0.6em;
   border-radius: 2px;
@@ -248,16 +333,16 @@ hr { border-top: 1px solid var(--rule); }
 /* ---------- Buttons ----------------------------------------------------- */
 
 .btn--inverse {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--rule);
   color: var(--ink);
 }
-.btn--inverse:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn--inverse:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-on); }
 
 /* ---------- Footer ------------------------------------------------------- */
 
 .page__footer {
-  background-color: var(--ink);
+  background-color: var(--footer-bg);
   background-image:
     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 40px),
     repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 40px);
@@ -295,10 +380,24 @@ div.author__avatar::after {
   border-bottom: 2px solid var(--accent);
 }
 
+/* ---------- CV page -------------------------------------------------- */
+
+.cv-actions { margin: 0.5em 0 1.25em; }
+
+.cv-embed {
+  display: block;
+  width: 100%;
+  height: min(1400px, 150vh);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
 /* ---------- Small screens --------------------------------------------- */
 
 @media (max-width: 47.9375em) {
   .author__avatar img { width: 120px; height: 120px; max-width: 120px; }
   div.author__avatar { width: 128px; }
   .page__title { font-size: 1.8em; }
+  .cv-embed { height: 85vh; }
 }
