@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Priyankari Perali"
 title_separator          : "-"
 name                     : &name "Priyankari Perali"
-description              : &description "Machine Learning Research Engineer (contractor, Parsons) at the U.S. DEVCOM Army Research Laboratory"
+description              : &description "PhD Student at the University of Maryland"
 url                      : https://priyankari.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Priyankari/priyankari.github.io"
@@ -24,11 +24,11 @@ author:
   avatar           : "priya_picture.jpg"
   name             : "Priyankari Perali"
   pronouns         : # example: "she/her"  
-  bio              : "Machine Learning Research Engineer (contractor, Parsons) at the U.S. DEVCOM Army Research Laboratory"
-  location         : "Aberdeen Proving Ground, MD"
-  employer         : "Parsons, U.S. DEVCOM Army Research Laboratory"
+  bio              : "PhD Student at UMD"
+  location         : "College Park, MD"
+  employer         : "University of Maryland"
   uri              : # URL
-  email            : "perali2000@gmail.com" 
+  email            : "perali@umd.edu"
 
   # Academic websites
   # arxiv            : # URL - Update with the correct link to your profile
