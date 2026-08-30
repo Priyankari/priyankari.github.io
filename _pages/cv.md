@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "CV"
+description: "Curriculum vitae of Priyankari Perali — PhD student at the University of Maryland (machine learning, remote sensing, disaster response)."
 permalink: /cv/
 author_profile: false
 redirect_from:

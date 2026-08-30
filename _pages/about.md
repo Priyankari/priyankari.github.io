@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Hi, I'm Priya 👋"
+description: "Priyankari (Priya) Perali is a PhD student at the University of Maryland working on representation learning, geospatial foundation models, and machine learning for disaster response."
 author_profile: true
 redirect_from: 
   - /about/
